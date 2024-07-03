@@ -1,0 +1,167 @@
+@use "sass:map";
+
+$fractionalWidth: 0.2px;
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Usato da bootstrap, non modificare la struttura, solo i valori
+$breakpoint-mw-sm: $breakpoint-sm - $fractionalWidth;
+$breakpoint-mw-md: $breakpoint-md - $fractionalWidth;
+$breakpoint-mw-lg: $breakpoint-lg - $fractionalWidth;
+$breakpoint-mw-xl: $breakpoint-xl - $fractionalWidth;
+$breakpoint-mw-xxl: $breakpoint-xxl - $fractionalWidth;
+
+$xsmall: (
+  max-width: $breakpoint-mw-sm,
+);
+$small: (
+    min-width: $breakpoint-sm,
+  )
+  and
+  (
+    max-width: $breakpoint-mw-md,
+  );
+$medium: (
+    min-width: $breakpoint-md,
+  )
+  and
+  (
+    max-width: $breakpoint-mw-lg,
+  );
+$large: (
+    min-width: $breakpoint-lg,
+  )
+  and
+  (
+    max-width: $breakpoint-mw-xl,
+  );
+$xlarge: (
+    min-width: $breakpoint-xl,
+  )
+  and
+  (
+    max-width: $breakpoint-mw-xxl,
+  );
+$xxlarge: (
+    min-width: $breakpoint-xxl,
+  )
+  and
+  (
+    max-width: $breakpoint-mw-xxl,
+  );
+
+$breakpoints-mw: (
+  "xs": $breakpoint-mw-sm,
+  "sm": $breakpoint-mw-md,
+  "md": $breakpoint-mw-lg,
+  "lg": $breakpoint-mw-xl,
+  "xl": $breakpoint-mw-xxl,
+);
+
+$breakpoints-name: "xs", "sm", "md", "lg", "xl", "xxl";
+
+// $handset: (
+//       max-width: 599.98px,
+//     )
+//     and
+//     (
+//       orientation: portrait,
+//     ),
+//   (
+//       max-width: 959.98px,
+//     )
+//     and
+//     (
+//       orientation: landscape,
+//     );
+// $tablet: (
+//       min-width: 600px,
+//     )
+//     and
+//     (
+//       max-width: 839.98px,
+//     )
+//     and
+//     (
+//       orientation: portrait,
+//     ),
+//   (
+//       min-width: 960px,
+//     )
+//     and
+//     (
+//       max-width: 1279.98px,
+//     )
+//     and
+//     (
+//       orientation: landscape,
+//     );
+// $web: (
+//       min-width: 840px,
+//     )
+//     and
+//     (
+//       orientation: portrait,
+//     ),
+//   (
+//       min-width: 1280px,
+//     )
+//     and
+//     (
+//       orientation: landscape,
+//     );
+// $handsetPortrait: (
+//     max-width: 599.98px,
+//   )
+//   and
+//   (
+//     orientation: portrait,
+//   );
+// $tabletPortrait: (
+//     min-width: 600px,
+//   )
+//   and
+//   (
+//     max-width: 839.98px,
+//   )
+//   and
+//   (
+//     orientation: portrait,
+//   );
+// $webPortrait: (
+//     min-width: 840px,
+//   )
+//   and
+//   (
+//     orientation: portrait,
+//   );
+// $handsetLandscape: (
+//     max-width: 959.98px,
+//   )
+//   and
+//   (
+//     orientation: landscape,
+//   );
+// $tabletLandscape: (
+//     min-width: 960px,
+//   )
+//   and
+//   (
+//     max-width: 1279.98px,
+//   )
+//   and
+//   (
+//     orientation: landscape,
+//   );
+// $webLandscape: (
+//     min-width: 1280px,
+//   )
+//   and
+//   (
+//     orientation: landscape,
+//   );

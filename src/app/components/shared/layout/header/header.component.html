@@ -1,0 +1,65 @@
+<mat-toolbar class="toolbar">
+  <div class="toolbar--logo logo">
+    <img
+      src="https://www.justetf.com/images/logo/justetf-logo.png?v2"
+      alt="just-etf-logo"
+    />
+  </div>
+  <div class="toolbar--menu menu horizontal-menu">
+    <ul>
+      <li>
+        <a href="#">
+          <span>Ricerca ETF</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Pianificatore</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>PAC ETF</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Accademia</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Confronti</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="toolbar--tools tools">
+    <div class="toolbar--search">
+      <form [formGroup]="toolbarForm" class="toolbar--search-form search-form">
+        <mat-form-field
+          appearance="outline"
+          subscriptSizing="dynamic"
+          [formControl]="toolbarForm.controls.searchInput"
+          ngDefaultControl
+          class="search-form-field"
+        >
+          <mat-icon matPrefix class="material-symbols-outlined"
+            >search</mat-icon
+          >
+          <input
+            matInput
+            placeholder="Ricerca di ETF, ISIN, WKN, guide all'investimento e articoli"
+            (focus)="onFocus()"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="tools--badge">
+      <div matBadge="4" matBadgeOverlap="true" class="demo-section"></div>
+    </div>
+    <div class="tools--profile">
+      <mat-icon class="material-symbols-outlined">person</mat-icon>
+    </div>
+  </div>
+</mat-toolbar>
