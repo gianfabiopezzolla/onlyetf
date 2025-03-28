@@ -1,9 +1,9 @@
 @use "sass:map";
 
-@import "./breakpoints";
+@use "breakpoints";
 
-@each $breakpoint in $breakpoints-name {
+@each $breakpoint in breakpoints.$breakpoints-name {
   .container-#{$breakpoint} {
-    max-width: map.get($breakpoints-mw, $breakpoint);
+    max-width: map.get(breakpoints.$breakpoints-mw, $breakpoint);
   }
 }
